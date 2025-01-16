@@ -39,7 +39,7 @@ jobs:
 
   slack-notify:
     needs:
-      - terraform-check
+      - create-backend
     if: always()
     runs-on: ubuntu-latest
     steps:
