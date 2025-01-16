@@ -30,7 +30,7 @@ variable "bation_instance_type" {
 variable "custom_ami_id" {
   description = "Custom AMI ID for EKS nodes"
   type        = string
-  default     = "ami-0476ff2866e16ac8a"
+  default     = "ami-0e28a3d4672edb444" # Get ID after Packer builds AMI
 }
 
 variable "default_tags" {
