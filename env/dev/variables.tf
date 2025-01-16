@@ -24,13 +24,13 @@ variable "bastion_ami_id" {
 variable "bation_instance_type" {
   description = "Instance type for bastion host"
   type        = string
-  default     = "t3.micro"
+  default     = "t3.medium"
 }
 
 variable "custom_ami_id" {
   description = "Custom AMI ID for EKS nodes"
   type        = string
-  default     = "ami-0e28a3d4672edb444" # Get ID after Packer builds AMI
+  default     = "ami-00d7463ae4ca4c847" # Get ID after Packer builds AMI
 }
 
 variable "default_tags" {
@@ -68,19 +68,19 @@ variable "node_capacity_type" {
 variable "node_group_desired_capacity" {
   description = "Desired number of nodes in the EKS node group"
   type        = number
-  default     = 2
+  default     = 6
 }
 
 variable "node_group_max_size" {
   description = "Maximum number of nodes in the EKS node group"
   type        = number
-  default     = 3
+  default     = 10
 }
 
 variable "node_group_min_size" {
   description = "Minimum number of nodes in the EKS node group"
   type        = number
-  default     = 1
+  default     = 6
 }
 
 variable "node_group_name" {
@@ -92,7 +92,7 @@ variable "node_group_name" {
 variable "node_instance_type" {
   description = "Instance type for the EKS nodes"
   type        = string
-  default     = "t3.small"
+  default     = "t3.medium"
 }
 
 variable "policy_arn" {
