@@ -1,0 +1,38 @@
+# Terraform
+.terraform/
+
+# Local .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files that are included with version control
+*.tfvars
+
+# .tfvars files that are not included with version control
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash log files
+crash.log
+
+# Exclude all .tfplan files
+*.tfplan
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# If you use the "remote" backend, exclude the .terraform directory
+# since it will be populated with remote state files
+.terraform
+
+# Ignore .hcl files for CLI command configuration
+*.hcl
+
+# Except .hcl files in packer/ directory
+!packer/**/*.hcl
+
+# CLI .terraform directories (local)
+.tf/

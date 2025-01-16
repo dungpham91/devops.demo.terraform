@@ -1,0 +1,13 @@
+version: 3
+projects:
+  - name: dev
+    dir: env/dev
+    workspace: default
+    autoplan:
+      enabled: true
+
+  - name: qa
+    dir: env/qa
+    workspace: default
+    autoplan:
+      enabled: true
