@@ -12,7 +12,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devopslite-dev-tf-state"
+    bucket         = "devopslite-dev-terraform-state"
     key            = "dev/terraform.tfstate"
     region         = "ap-southeast-1"
     encrypt        = true
