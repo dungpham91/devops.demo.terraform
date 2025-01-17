@@ -45,12 +45,12 @@ variable "region" {
 
 variable "vpc_id" {
   type    = string
-  default = "vpc-050a622ea8efc05b1"
+  default = "vpc-08302ac1acf1735dc"
 }
 
 variable "public_subnet_id" {
   type    = string
-  default = "subnet-0152eb062302ac1cd"
+  default = "subnet-05c808767355648a5"
 }
 
 variable "communicator" {
