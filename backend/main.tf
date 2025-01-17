@@ -26,13 +26,13 @@ resource "aws_s3_bucket" "tf_state_bucket" {
   # checkov:skip=CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
   # checkov:skip=CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
   # checkov:skip=CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
-  bucket        = "${var.project}-tf-state"
+  bucket        = "${var.project}-terraform-state"
   force_destroy = true
 
   tags = merge(
     var.default_tags,
     {
-      Name = "${var.project}-tf-state"
+      Name = "${var.project}-terraform-state"
     }
   )
 }
