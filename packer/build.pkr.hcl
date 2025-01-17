@@ -40,17 +40,17 @@ variable "aws_tag_project" {
 
 variable "region" {
   type    = string
-  default = "us-east-1"
+  default = "ap-southeast-1"
 }
 
 variable "vpc_id" {
   type    = string
-  default = "vpc-0e915bc98927c4ba2"
+  default = "vpc-074218bada64e2cd7"
 }
 
 variable "public_subnet_id" {
   type    = string
-  default = "subnet-0b07a2f79d091f816"
+  default = "subnet-08080c425d92b5689"
 }
 
 variable "communicator" {

@@ -12,9 +12,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devopslite-tf-state"
+    bucket         = "devopslite-terraform-state"
     key            = "dev/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-southeast-1"
     encrypt        = true
     dynamodb_table = "devopslite-tf-state"
   }

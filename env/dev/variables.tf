@@ -12,19 +12,19 @@ variable "access_scope_type" {
 
 variable "aws_region" {
   type    = string
-  default = "us-east-1"
+  default = "ap-southeast-1"
 }
 
 variable "bastion_ami_id" {
   description = "AMI ID for Bastion Host"
   type        = string
-  default     = "ami-05576a079321f21f8" # Amazon Linux 2023 AMI
+  default     = "ami-0bd55ebedabddc3c0" # Amazon Linux 2023 AMI
 }
 
 variable "bation_instance_type" {
   description = "Instance type for bastion host"
   type        = string
-  default     = "t3.medium"
+  default     = "t3.small"
 }
 
 variable "custom_ami_id" {
@@ -68,19 +68,19 @@ variable "node_capacity_type" {
 variable "node_group_desired_capacity" {
   description = "Desired number of nodes in the EKS node group"
   type        = number
-  default     = 6
+  default     = 3
 }
 
 variable "node_group_max_size" {
   description = "Maximum number of nodes in the EKS node group"
   type        = number
-  default     = 10
+  default     = 4
 }
 
 variable "node_group_min_size" {
   description = "Minimum number of nodes in the EKS node group"
   type        = number
-  default     = 6
+  default     = 3
 }
 
 variable "node_group_name" {

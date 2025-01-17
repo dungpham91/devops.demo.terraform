@@ -7,16 +7,16 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devopslite-tf-state"
+    bucket         = "devopslite-terraform-state"
     key            = "s3-backend/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-southeast-1"
     encrypt        = true
     dynamodb_table = "devopslite-tf-state"
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-southeast-1"
 }
 
 data "aws_caller_identity" "current" {}
