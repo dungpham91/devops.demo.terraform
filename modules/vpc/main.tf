@@ -31,9 +31,11 @@ resource "aws_subnet" "public_subnet" {
   tags = merge(
     var.default_tags,
     {
-      VPC   = "${var.project}-${var.environment}"
-      State = "public"
-      Name  = "${var.project}-${var.environment}-public-${count.index}"
+      VPC                                                                   = "${var.project}-${var.environment}"
+      State                                                                 = "public"
+      Name                                                                  = "${var.project}-${var.environment}-public-${count.index}"
+      "kubernetes.io/cluster/${var.project}-${var.environment}-eks-cluster" = "owned"
+      "kubernetes.io/role/elb"                                              = "1"
     }
   )
 }
@@ -48,9 +50,11 @@ resource "aws_subnet" "private_subnet" {
   tags = merge(
     var.default_tags,
     {
-      VPC   = "${var.project}-${var.environment}"
-      State = "private"
-      Name  = "${var.project}-${var.environment}-private-${count.index}"
+      VPC                                                                   = "${var.project}-${var.environment}"
+      State                                                                 = "private"
+      Name                                                                  = "${var.project}-${var.environment}-private-${count.index}"
+      "kubernetes.io/cluster/${var.project}-${var.environment}-eks-cluster" = "owned"
+      "kubernetes.io/role/internal-elb"                                     = "1"
     }
   )
 }
