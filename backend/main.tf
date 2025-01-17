@@ -116,7 +116,7 @@ resource "aws_kms_key_policy" "tf_kms_key_policy" {
         Sid    = "Allow administration of the key"
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/cloud_user"
+          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/devopslite"
         },
         Action = [
           "kms:ReplicateKey",
@@ -139,7 +139,7 @@ resource "aws_kms_key_policy" "tf_kms_key_policy" {
         Sid    = "Allow use of the key"
         Effect = "Allow"
         Principal = {
-          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/cloud_user",
+          AWS = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:user/devopslite",
           Service = [
             "s3.amazonaws.com",
             "dynamodb.amazonaws.com"
