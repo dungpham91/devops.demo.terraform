@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "devopslite-terraform-state"
+    bucket         = "devopslite-dev-tf-state"
     key            = "s3-backend/terraform.tfstate"
     region         = "ap-southeast-1"
     encrypt        = true
@@ -26,13 +26,13 @@ resource "aws_s3_bucket" "tf_state_bucket" {
   # checkov:skip=CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
   # checkov:skip=CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
   # checkov:skip=CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
-  bucket        = "${var.project}-terraform-state"
+  bucket        = "${var.project}-dev-tf-state"
   force_destroy = true
 
   tags = merge(
     var.default_tags,
     {
-      Name = "${var.project}-terraform-state"
+      Name = "${var.project}-dev-tf-state"
     }
   )
 }
