@@ -1,3 +1,70 @@
+# Cấu trúc thư mục repo
+
+```
+devops.demo.terraform/
+├── .git/
+│   ├── hooks/
+│   └── ...existing git files...
+├── .github/
+│   └── workflows/
+│       ├── create-backend.yml
+│       ├── packer.yml
+│       └── pr-check.yml
+├── .gitignore
+├── atlantis.yaml
+├── backend/
+│   └── .terraform/
+│       ├── .terraform.lock.hcl
+│       ├── main.tf
+│       ├── outputs.tf
+│       ├── terraform.tfstate
+│       └── variables.tf
+├── env/
+│   └── dev/
+├── images/
+│   ├── devops-demo.jpg
+│   └── terraform-result.jpg
+├── LICENSE
+├── modules/
+│   ├── bastion/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── ecr/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── eks/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── eks-access/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── kms/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── ssm/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   └── vpc-endpoint/
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── packer/
+│   └── build.pkr.hcl
+├── README.md
+├── templates/
+│   ├── bootstrap.sh.tpl
+│   └── nodeadm.yml.tpl
+```
 # The repository contains the Terraform code used to create the infrastructure for the demo DevOps flow
 
 Hi,
