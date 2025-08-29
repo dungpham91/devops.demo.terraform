@@ -1,4 +1,12 @@
-# Cấu trúc thư mục repo
+# The repository contains the Terraform code used to create the infrastructure for the demo DevOps flow
+
+Hi,
+
+This is a repository from a group of repositories that I used to do a demo of building a GitOps system combined with DevSecOps (basic).
+
+![devops-demo.jpg](./images/devops-demo.jpg)
+
+### Repo directory structure
 
 ```
 devops.demo.terraform/
@@ -65,13 +73,6 @@ devops.demo.terraform/
 │   ├── bootstrap.sh.tpl
 │   └── nodeadm.yml.tpl
 ```
-# The repository contains the Terraform code used to create the infrastructure for the demo DevOps flow
-
-Hi,
-
-This is a repository from a group of repositories that I used to do a demo of building a GitOps system combined with DevSecOps (basic).
-
-![devops-demo.jpg](./images/devops-demo.jpg)
 
 Below is a list of all the repositories that I used.
 
